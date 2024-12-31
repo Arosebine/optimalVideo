@@ -37,14 +37,14 @@ export const updateVideo = async (req: Request, res: Response, next: NextFunctio
             return res.status(401).json({message: 'Unauthorized, only admins can update videos'})
         }
 
-        const { title, description, genre, duration } = req.body;
+        const { title, description, genre, tags, duration } = req.body;
         const { videoId } = req.params;
         const [updated] = await Video.update({
             title,
             description,
             genre,
             duration,
-            tags: { title, genre, description }
+            tags,
         }, { where: { id: videoId } });
 
         if (!updated) {

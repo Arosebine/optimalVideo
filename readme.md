@@ -22,7 +22,6 @@ The Optimal Video is a company behind this backend web application that is built
 npm install
 
 npm run dev
-npm test
 
 # Documentation:
 

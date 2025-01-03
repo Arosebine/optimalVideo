@@ -22,7 +22,6 @@ const PORT: number = parseInt(process.env.PORT as string, 10);
 
 const app = express();
 connectDB();
-// connectRedis();
 
 app.use(cors());
 app.use(express.json());
@@ -32,7 +31,7 @@ app.use(limiter);
 
 
 app.get("/", (req, res) => {
-  res.send("Hello, Welcome to the Lampnet Ecommerce app!");
+  res.send("Hello, Welcome to the Optimal Video App!");
 });
 
 app.use("/api/v1/user", userRouter);
